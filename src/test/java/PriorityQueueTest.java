@@ -14,11 +14,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PriorityQueueTest {
     static Stream<Arguments> stringIntAndListProvider() {
         return Stream.of(
-            Arguments.of(new int[]{3,1,2}, new int[]{1,0,3}),
-            Arguments.of(new int[]{-3,-1,-2,5}, new int[]{-3,9,-1,5}),
-            Arguments.of(new int[]{3,-2,-5,-1,2}, new int[]{-5,-2,-1,4,3}),
-            Arguments.of(new int[]{-3,1,11,0,9,3}, new int[]{-3,0,0,3,9,11}),
-            Arguments.of(new int[]{3,7,2,-1,-2}, new int[]{-2,-8,2,3,7})
+            Arguments.of(new int[]{3,1,2}, new int[]{1,2,3}),
+            Arguments.of(new int[]{-3,-1,-2,5}, new int[]{-3,-2,-1,5}),
+            Arguments.of(new int[]{3,-2,-5,-1,2}, new int[]{-5,-2,-1,2,3}),
+            Arguments.of(new int[]{-3,1,11,0,9,3}, new int[]{-3,0,1,3,9,11}),
+            Arguments.of(new int[]{3,7,2,-1,-2}, new int[]{-2,-1,2,3,7})
         );
     }
     @ParameterizedTest(name="#{index} - Test with Argument={0},{1}")
